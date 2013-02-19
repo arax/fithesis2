@@ -1,0 +1,67 @@
+%%
+%% This file `cslatexquotes.sty' is partly derived from file `czech.sty' 
+%% and is NOT a part of CSLaTeX. For more `czech.sty' information see 
+%% http://www.cstug.cz/cslatex/.
+%% 
+%% Copyright (c) 1994--98, 2002 (`czech.sty')
+%% Jaroslav Snajdr, Zdenek Wagner, Jiri Zlatuska and The LaTeX3 Project
+%% Copyright (c) 2005 (`cslatexquotes.sty')
+%% Michal Ruzicka
+%% 
+% Czech double quotes
+% left (\clqq command)
+\DeclareTextCommand{\clqq}{T1}{\leavevmode\char18\nobreak\hskip0pt}
+% right (\crqq command)
+\DeclareTextCommand{\crqq}{T1}{{\edef\@SF{\spacefactor\the\spacefactor}%
+\nobreak\char16\@SF\relax}}
+% \uv{} command
+\DeclareRobustCommand\uv[1]{{\leavevmode\clqq#1\crqq}}
+%%
+% Czech single quotes
+% left (\clq command)
+\DeclareTextCommand{\clq}{T1}{\leavevmode\char13\nobreak\hskip0pt}
+% right (\crq command)
+\DeclareTextCommand{\crq}{T1}{{\edef\@SF{\spacefactor\the\spacefactor}%
+\nobreak\char96\@SF\relax}}
+% \juv{} command
+\DeclareRobustCommand\juv[1]{{\leavevmode\clq#1\crq}}
+%%
+% French double quotes
+% left (\flqq command)
+\DeclareTextCommand{\flqq}{T1}{\leavevmode\char19\nobreak\hskip0pt}
+% right (\frqq command)
+\DeclareTextCommand{\frqq}{T1}{\nobreak\char20\relax}
+% \fuv{} command
+\DeclareRobustCommand\fuv[1]{{\leavevmode\flqq#1\frqq}}
+% \fuvcs{} command
+\DeclareRobustCommand\fuvcs[1]{{\leavevmode\frqq#1\flqq}}
+%%
+% French single quotes
+% left (\flq command)
+\DeclareTextCommand{\flq}{T1}{\leavevmode\char14\nobreak\hskip0pt}
+% right (\frq command)
+\DeclareTextCommand{\frq}{T1}{\nobreak\char15\relax}
+% \jfuv{} command
+\DeclareRobustCommand\jfuv[1]{{\leavevmode\flq#1\frq}}
+% \jfuvcs{} command
+\DeclareRobustCommand\jfuvcs[1]{{\leavevmode\frq#1\flq}}
+%% 
+% English double quotes
+% left (\elqq command)
+\DeclareTextCommand{\elqq}{T1}{\leavevmode\char16\nobreak\hskip0pt}
+% right (\erqq command)
+\DeclareTextCommand{\erqq}{T1}{{\edef\@SF{\spacefactor\the\spacefactor}%
+\nobreak\char17\@SF\relax}}
+% \auv{} command
+\DeclareRobustCommand\auv[1]{{\leavevmode\elqq#1\erqq}}
+%%
+% English single quotes
+% left (\elq command)
+\DeclareTextCommand{\elq}{T1}{\leavevmode\char96\nobreak\hskip0pt}
+% right (\erq command)
+\DeclareTextCommand{\erq}{T1}{{\edef\@SF{\spacefactor\the\spacefactor}%
+\nobreak\char39\@SF\relax}}
+% \jauv{} command
+\DeclareRobustCommand\jauv[1]{{\leavevmode\elq#1\erq}}
+%%
+%% End of file `cslatexquotes.sty'.
