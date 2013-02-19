@@ -1,12 +1,15 @@
 FIThesis2
 =========
-This repository is a fork of http://is.muni.cz/th/173173/fi\_b?lang=en
+This repository is a fork of http://is.muni.cz/th/173173/fi_b?lang=en
 
 ## Installation
+
 ### Local
 * Copy the content of this repository to a directory containing your \*.tex files
+
 ### System-wide
-* Copy the content of this repository to a location where '''kpathsea''' can find it and run '''texhash''' or '''mktexlsr'''
+* Copy the content of this repository to a location where `kpathsea` can find it and run `texhash` or `mktexlsr`
+
 ~~~
 # An example for Debian/Ubuntu based distros with TeXLive
 sudo cp -R fithesis2 /usr/share/texmf/tex/latex
@@ -16,6 +19,7 @@ sudo texhash
 ~~~
 
 ## Usage
+
 ~~~
 %% Load document class fithesis2
 %% {10pt, 11pt, 12pt}
@@ -129,5 +133,6 @@ GitHub, Thesis, Key, Words, Specific, ...
 ~~~
 
 ## Credits
+
 * Jan Pavlovič (fithesis)
 * Stanislav Filipčík (fithesis2)
