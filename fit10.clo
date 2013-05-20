@@ -102,7 +102,7 @@
         \par\nobreak
         \vskip 10\p@
     \fi
-    \Large \ChapFont \thechapter{} \space #1\par
+    \Large \ChapFont \ifnum\tmpchapter>0 \thechapter{} \fi \space #1\par
     \nobreak
     \vskip 20\p@
   }}
