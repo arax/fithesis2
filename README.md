@@ -122,8 +122,19 @@ GitHub, Thesis, Key, Words, Specific, ...
 \listoftables
 
 %% Bibliography from references.bib
+\begingroup
+\def\tmpchapter{0}
+\renewcommand{\chaptername}{}
+\renewcommand{\thechapter}{}
+\addtocontents{toc}{\setcounter{tocdepth}{-1}}
+\chapter{References}
+\renewcommand{\chapter}[2]{}% for other classes
+
 \bibliographystyle{plain}
 \bibliography{references}
+
+\addtocontents{toc}{\setcounter{tocdepth}{2}}
+\endgroup
 
 %% Additional materials
 \appendix

@@ -49,8 +49,13 @@
 \def\chaptermark##1{%
 \markright{%
 \ifnum\c@secnumdepth >\m@ne
+\ifnum\tmpchapter=0
+\else
+\ifnum\tmpchapter=2
+\thechapter\
+\else
 \thechapter.\ %
-\fi ##1}}
+\fi\fi\fi ##1}}
 \let\@oddfoot\@empty
 \let\@oddhead\@empty
 \def\@oddhead{\vbox{\hbox to \textwidth{%
@@ -513,6 +518,8 @@ Advisor:
 \renewcommand*\l@section{\@dottedtocline{2}{1.5em}{2.3em}}
 \renewcommand*\l@subsection{\@dottedtocline{3}{3.8em}{3.2em}}
 \renewcommand*\l@subsubsection{\@dottedtocline{4}{7.0em}{3.8em}}
+
+\def\tmpchapter{1}
 
 \endinput
 %%
